@@ -24,7 +24,7 @@ DATABASE1="database1"
 ######################################################
 
 # Enable clean module? 0 - no, 1 - yes
-enable_clean="1"
+enable_clean="0"
 # Directory that will be cleaned
 clean_directory="/etc/mysql/backups"
 # Age of files to clean
