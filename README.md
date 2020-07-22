@@ -2,7 +2,7 @@
 
 ## About This Little Script
 SQLBackup is a powerful and easy customizeable **shell script** (.sh) that helps you to make SQL databases backups and clean old backups automatically.
-The backup functionality is implemented using the commands of the **mysqldump** commands.
+The backup functionality is implemented using the commands of the **mysqldump** utility.
 
 ## Questions & Answers
 **Q:** What do I need to use this script?
