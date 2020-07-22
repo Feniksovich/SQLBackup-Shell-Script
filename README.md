@@ -26,11 +26,11 @@ The backup functionality is implemented using the commands of the **mysqldump** 
 #######################################################
 
 # Use this command if your user have password
-/usr/bin/mysqldump -u ${user} -p ${password} ${DATABASE1} > $directory/${DATABASE1}/${DATABASE1}$dateformat.$ext
+/usr/bin/mysqldump -u ${user} -p ${password} ${DATABASE1} > $directory/${DATABASE1}$dateformat.$ext
 echo "${OK} ${DATABASE1} saved."
 
 # Use this command if your user have NOT password (root as usually)
-/usr/bin/mysqldump -u ${user} ${DATABASE1} > $directory/${DATABASE1}/${DATABASE1}$dateformat.$ext
+/usr/bin/mysqldump -u ${user} ${DATABASE1} > $directory/${DATABASE1}$dateformat.$ext
 echo "${OK} ${DATABASE1} saved."
 ```
 
@@ -40,7 +40,7 @@ echo "${OK} ${DATABASE1} saved."
 <br>**DANGER: CHECKUP YOUR `CLEAN_DIRECTORY` VAR BEFORE STARTING CLEAN MODULE**
 6. Move to the directory where the script is located and run it:
 ```sh
-sh sqlbackup.sh
+cd /path/to/script && sh sqlbackup.sh
 ```
 7. Check up backup files directory to make sure everything is set up correctly.
 
