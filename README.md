@@ -2,11 +2,11 @@
 
 ## About This Little Script
 SQLBackup is a powerful and easy customizeable **shell script** (.sh) that helps you to make SQL databases backups and clean old backups automatically.
-The backup functionality is implemented using the commands of the **mysqldump** program.
+The backup functionality is implemented using the commands of the **mysqldump** commands.
 
 ## Questions & Answers
-**Q:** Do I need to install **mysqldump** for this script?
-<br>**A:** Yes. Otherwise, the script will not perform backups, because it use commands of them.
+**Q:** What do I need to use this script?
+<br>**A:** *MySQL >5.7 version* or *MariaDB >10.3.23 version*
 
 **Q:** Will I be able to automate the execution of the script?
 <br>**A:** Of course, like any other shell script, it can be called automatically by the system or programs.
@@ -16,9 +16,8 @@ The backup functionality is implemented using the commands of the **mysqldump** 
 <br>**A:** Currently, no. But I have already planned to implement this ;)
 
 ## Installation
-1. Install **mysqldump**.
-2. Download **sqlbackup.sh** on your machine and put in the desired directory ```/etc/mysql/ for example```
-3. Open **sqlbackup.sh** file and [move to 64 line](https://github.com/Feniksovich/SQLBackup-Shell-Script/blob/master/sqlbackup.sh#L64). There are the mysqldump commands to perform backups.
+1. Clone **sqlbackup.sh** into the desired directory ```/etc/mysql/ for example```
+2. Open **sqlbackup.sh** file and [move to 64 line](https://github.com/Feniksovich/SQLBackup-Shell-Script/blob/master/sqlbackup.sh#L64). There are the mysqldump commands to perform backups.
 <br> Follow my instructions in comments and choose the option you need.
 ```sh
 #######################################################
@@ -34,15 +33,15 @@ echo "${OK} ${DATABASE1} saved."
 echo "${OK} ${DATABASE1} saved."
 ```
 
-4. Move to the top of the file and set the required values in **Backup Module Settings**.
+3. Move to the top of the file and set the required values in **Backup Module Settings**.
 <br>If your user does not have a password and you chose the second option in step 3, the `password` field can be left unchanged.
-5. If you want to perform cleanup after script execution, set `enable_clean` to `1` and set the required parameters below.
+4. If you want to perform cleanup after script execution, set `enable_clean` to `1` and set the required parameters below.
 <br>**DANGER: CHECKUP YOUR `CLEAN_DIRECTORY` VAR BEFORE STARTING CLEAN MODULE**
-6. Move to the directory where the script is located and run it:
+5. Move to the directory where the script is located and run it:
 ```sh
 cd /path/to/script && sh sqlbackup.sh
 ```
-7. Check up backup files directory to make sure everything is set up correctly.
+6. Check up backup files directory to make sure everything is set up correctly.
 
 ## Setup Сron Task
 If you need to run this script automatically, you can add the following task:
