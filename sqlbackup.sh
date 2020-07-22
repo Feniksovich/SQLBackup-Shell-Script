@@ -62,11 +62,11 @@ echo "${INFO} Processing databases backup..."
 #######################################################
 
 # Use this command if your user have password
-/usr/bin/mysqldump -u ${user} -p ${password} ${DATABASE1} > $directory/${DATABASE1}/${DATABASE1}$dateformat.$ext
+/usr/bin/mysqldump -u ${user} -p ${password} ${DATABASE1} > $directory/${DATABASE1}$dateformat.$ext
 echo "${OK} ${DATABASE1} saved."
 
 # Use this command if your user have NOT password (root as usually)
-/usr/bin/mysqldump -u ${user} ${DATABASE1} > $directory/${DATABASE1}/${DATABASE1}$dateformat.$ext
+/usr/bin/mysqldump -u ${user} ${DATABASE1} > $directory/${DATABASE1}$dateformat.$ext
 echo "${OK} ${DATABASE1} saved."
 
 #######################################################
