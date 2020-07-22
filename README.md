@@ -10,7 +10,7 @@ The backup functionality is implemented using the commands of the **mysqldump** 
 
 **Q:** Will I be able to automate the execution of the script?
 <br>**A:** Of course, like any other shell script, it can be called automatically by the system or programs.
-<br> *You can use **cron** as an ideal solution to this question.*
+<br> *You can use **cron** as an ideal solution to this question.* [Move to cron setup guide](https://github.com/Feniksovich/SQLBackup-Shell-Script#setup-cron-task).
 
 **Q:** Can I track the execution of a script in specific log file?
 <br>**A:** Currently, no. But I have already planned to implement this ;)
@@ -18,7 +18,7 @@ The backup functionality is implemented using the commands of the **mysqldump** 
 ## Installation
 1. Install **mysqldump**.
 2. Download **sqlbackup.sh** on your machine and put in the desired directory ```/etc/mysql/ for example```
-3. Open **sqlbackup.sh** file and move to 64 line. There are the mysqldump commands to perform backups.
+3. Open **sqlbackup.sh** file and [move to 64 line](https://github.com/Feniksovich/SQLBackup-Shell-Script/blob/master/sqlbackup.sh#L64). There are the mysqldump commands to perform backups.
 <br> Follow my instructions in comments and choose the option you need.
 ```sh
 #######################################################
@@ -44,7 +44,7 @@ cd /path/to/script && sh sqlbackup.sh
 ```
 7. Check up backup files directory to make sure everything is set up correctly.
 
-## Setup cron task
+## Setup Сron Еask
 If you need to run this script automatically, you can add the following task:
 ```sh
 * * * * * cd /path/to/script && sh sqlbackup.sh
