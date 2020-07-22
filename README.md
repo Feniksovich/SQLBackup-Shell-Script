@@ -44,7 +44,7 @@ cd /path/to/script && sh sqlbackup.sh
 ```
 7. Check up backup files directory to make sure everything is set up correctly.
 
-## Setup Сron Еask
+## Setup Сron Task
 If you need to run this script automatically, you can add the following task:
 ```sh
 * * * * * cd /path/to/script && sh sqlbackup.sh
