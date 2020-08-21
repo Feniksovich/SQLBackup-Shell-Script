@@ -78,7 +78,7 @@ if [ $enable_clean -eq "1" ];
     echo "\n${INFO} Running Clean Module..."
     echo "${INFO} Processing clean action..."
     # DANGER: CHECKUP YOUR CLEAN_DIRECTORY VAR BEFORE STARTING THAT SCRIPT #
-    find ${clean_directory}/ -type f -mtime +${days} -exec rm -rf {} \;
+    find ${clean_directory}/ -type f -mtime +${days} -exec rm -rf {} \; >>~2\/dev/null
     ########################################################################
     echo "${OK} All backups files older than ${days} day(s) successfully cleared."
   else
